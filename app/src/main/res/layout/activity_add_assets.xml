@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.AddAssets.AddAssetsActivity">
+
+    <EditText
+        android:id="@+id/barcodeEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:background="@drawable/edittext_custom"
+
+        android:defaultFocusHighlightEnabled="true"
+        android:focusable="true"
+        android:focusedByDefault="true"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:padding="@dimen/_10ssp"
+        android:selectAllOnFocus="true"
+        android:textAlignment="center"
+        android:textColor="@color/blue3"
+        android:hint="Scan BarCode"
+        android:textColorHint="@color/blue6"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/spinnersLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/saveAssetBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barcodeEt">
+
+        <LinearLayout
+            android:id="@+id/locationLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/blue1"
+            android:layout_margin="@dimen/_20sdp"
+
+            >
+
+            <Spinner
+                android:id="@+id/locationSpinner"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:popupBackground="@color/blue1" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/addlocBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/bg_blue"
+                android:elevation="@dimen/_10sdp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:src="@drawable/ic_baseline_add_location_alt_24"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_15ssp"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/desLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20sdp"
+            android:background="@color/blue1"
+            android:orientation="horizontal">
+
+
+            <Spinner
+                android:id="@+id/SpinnerDescription"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+
+                android:layout_margin="@dimen/_10sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/addDesBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/bg_blue"
+                android:elevation="@dimen/_10sdp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_baseline_add_business_24"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_15ssp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveAssetBtn"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_grey"
+        android:elevation="@dimen/_10sdp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:paddingStart="@dimen/_30sdp"
+        android:paddingEnd="@dimen/_30sdp"
+        android:text="Save Asset "
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
